@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight, Sun } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ReviewProps {
@@ -9,56 +9,62 @@ interface ReviewProps {
   rating: number;
   date: string;
   verified: boolean;
+  location?: string;
 }
 
 const reviewData: ReviewProps[] = [
   {
-    quote: "I've tried countless probiotics over the years, but Maximally is truly exceptional. Within just two weeks, my digestion improved dramatically and bloating is now a thing of the past.",
-    author: "Jennifer M.",
+    quote: "I was suffering from digestive issues for years. After trying Maximally, my gut health has dramatically improved! Even my family members have noticed the positive change in me.",
+    author: "Priya Sharma",
     rating: 5,
     date: "March 15, 2023",
-    verified: true
+    verified: true,
+    location: "Mumbai"
   },
   {
-    quote: "As someone who's struggled with digestive issues for years, finding Maximally has been life-changing. Not only has my gut health improved, but my energy levels are through the roof!",
-    author: "Michael T.",
+    quote: "Being a software professional with long sitting hours, I had terrible digestive problems. Maximally probiotics have been a game-changer! My energy levels are absolutely fantastic now.",
+    author: "Raj Patel",
     rating: 5,
     date: "April 2, 2023",
-    verified: true
+    verified: true,
+    location: "Bengaluru"
   },
   {
-    quote: "The difference in quality between Maximally and other probiotics is remarkable. My immune system seems stronger and I've noticed improvements in my skin clarity too. Worth every penny.",
-    author: "Sarah K.",
+    quote: "After my second child, my digestion was not working properly. Maximally helped me restore my gut balance. The quality is top-notch and worth every rupee!",
+    author: "Anjali Gupta",
     rating: 5,
     date: "February 10, 2023",
-    verified: true
+    verified: true,
+    location: "New Delhi"
   },
   {
-    quote: "After just one month of using Maximally, my digestive system feels completely reset. No more discomfort after meals and my energy levels have significantly increased.",
-    author: "David P.",
+    quote: "My mother recommended Maximally to me when I was facing acidity issues. Within just two weeks, I could feel the difference. No more discomfort after meals!",
+    author: "Vikram Singh",
     rating: 5,
     date: "May 18, 2023",
-    verified: true
+    verified: true,
+    location: "Chennai"
   },
   {
-    quote: "I was skeptical about yet another probiotic, but the research behind Maximally convinced me to try it. I'm so glad I did - the results have exceeded my expectations in every way.",
-    author: "Rachel W.",
+    quote: "I have tried many probiotics available in the market, but nothing compares to Maximally. The results are simply amazing and my digestion has improved 100%!",
+    author: "Neha Verma",
     rating: 4,
     date: "January 28, 2023",
-    verified: true
+    verified: true,
+    location: "Hyderabad"
   }
 ];
 
-const ReviewCard = ({ quote, author, rating, date, verified }: ReviewProps) => {
+const ReviewCard = ({ quote, author, rating, date, verified, location }: ReviewProps) => {
   return (
-    <div className="bg-white rounded-xl p-8 shadow-md">
+    <div className="bg-gradient-to-b from-white to-cyan-50 rounded-xl p-8 shadow-md border border-cyan-100 hover:shadow-lg transition-all">
       <div className="flex mb-4">
         {Array.from({ length: 5 }).map((_, i) => (
           <Star 
             key={i} 
             className={cn(
               "w-5 h-5", 
-              i < rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"
+              i < rating ? "text-amber-400 fill-amber-400" : "text-gray-300"
             )} 
           />
         ))}
@@ -66,11 +72,16 @@ const ReviewCard = ({ quote, author, rating, date, verified }: ReviewProps) => {
       <p className="text-gray-700 mb-6 italic">"{quote}"</p>
       <div className="flex justify-between items-end">
         <div>
-          <p className="font-medium text-maximally-800">{author}</p>
-          <p className="text-sm text-gray-500">{date}</p>
+          <p className="font-medium text-cyan-800">{author}</p>
+          <div className="flex items-center gap-1">
+            <p className="text-sm text-gray-500">{date}</p>
+            {location && (
+              <span className="text-sm text-gray-500">• {location}</span>
+            )}
+          </div>
         </div>
         {verified && (
-          <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded-full">
+          <span className="text-xs bg-teal-50 text-teal-700 px-2 py-1 rounded-full">
             Verified Purchase
           </span>
         )}
@@ -124,16 +135,16 @@ const Reviews = () => {
   };
 
   return (
-    <section id="reviews" className="section-padding bg-gradient-to-b from-white to-maximally-50/30" ref={sectionRef}>
+    <section id="reviews" className="section-padding bg-gradient-to-b from-sky-50 to-cyan-50/30" ref={sectionRef}>
       <div className="maximally-container">
         {/* Section Title */}
         <div ref={titleRef} className="reveal-on-scroll text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3 py-1 rounded-full bg-maximally-100 text-maximally-700 text-sm font-medium mb-4">
-            Real Customer Experiences
+          <span className="inline-block px-3 py-1 rounded-full bg-cyan-100 text-cyan-700 text-sm font-medium mb-4">
+            Customer Stories
           </span>
-          <h2 className="section-title mb-6">What Our Community Is Saying</h2>
+          <h2 className="section-title mb-6 text-cyan-900">Hear From Our Community</h2>
           <p className="text-lg text-gray-600">
-            Thousands of customers have transformed their gut health with Maximally. Here are some of their stories.
+            Thousands of happy customers across India have transformed their gut health with Maximally. Read their experiences.
           </p>
         </div>
         
@@ -157,7 +168,7 @@ const Reviews = () => {
           {/* Navigation Arrows */}
           <button 
             onClick={prev}
-            className="absolute top-1/2 -left-4 md:-left-8 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-maximally-700 hover:text-maximally-900 transition-colors focus:outline-none"
+            className="absolute top-1/2 -left-4 md:-left-8 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-cyan-700 hover:text-cyan-900 transition-colors focus:outline-none"
             aria-label="Previous review"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -165,7 +176,7 @@ const Reviews = () => {
           
           <button 
             onClick={next}
-            className="absolute top-1/2 -right-4 md:-right-8 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-maximally-700 hover:text-maximally-900 transition-colors focus:outline-none"
+            className="absolute top-1/2 -right-4 md:-right-8 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-cyan-700 hover:text-cyan-900 transition-colors focus:outline-none"
             aria-label="Next review"
           >
             <ChevronRight className="w-6 h-6" />
@@ -180,7 +191,7 @@ const Reviews = () => {
               onClick={() => setActiveIndex(i)}
               className={cn(
                 "w-2.5 h-2.5 rounded-full transition-all duration-300",
-                activeIndex === i ? "bg-maximally-600 w-8" : "bg-maximally-200"
+                activeIndex === i ? "bg-cyan-600 w-8" : "bg-cyan-200"
               )}
               aria-label={`Go to review page ${i + 1}`}
             />
@@ -188,11 +199,11 @@ const Reviews = () => {
         </div>
         
         {/* Amazon Rating Summary */}
-        <div className="mt-16 bg-white rounded-xl p-8 shadow-md">
+        <div className="mt-16 bg-gradient-to-r from-cyan-50 to-sky-50 rounded-xl p-8 shadow-md border border-cyan-100">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center">
-              <div className="w-24 h-24 flex items-center justify-center bg-maximally-50 rounded-full mr-6">
-                <span className="text-3xl font-bold text-maximally-700">4.8</span>
+              <div className="w-24 h-24 flex items-center justify-center bg-amber-50 rounded-full mr-6 border-2 border-amber-100">
+                <span className="text-3xl font-bold text-amber-600">4.8</span>
               </div>
               <div>
                 <div className="flex mb-2">
@@ -201,18 +212,18 @@ const Reviews = () => {
                       key={i} 
                       className={cn(
                         "w-6 h-6", 
-                        i < 5 ? "text-yellow-400 fill-yellow-400" : "text-gray-300"
+                        i < 5 ? "text-amber-400 fill-amber-400" : "text-gray-300"
                       )} 
                     />
                   ))}
                 </div>
-                <p className="text-gray-600">Based on 1,200+ Amazon reviews</p>
+                <p className="text-gray-600">Based on 1,200+ Amazon India reviews</p>
               </div>
             </div>
             
             <div className="text-center md:text-right">
-              <p className="text-lg font-medium text-maximally-800 mb-2">
-                Ranked #1 in Amazon's Probiotic Category
+              <p className="text-lg font-medium text-cyan-800 mb-2">
+                #1 Best-Selling Probiotic on Amazon.in
               </p>
               <p className="text-sm text-gray-600">
                 For three consecutive months in 2023

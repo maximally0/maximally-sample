@@ -9,6 +9,7 @@ import Reviews from '@/components/Reviews';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
+import { Waves } from 'lucide-react';
 
 const Index = () => {
   useEffect(() => {
@@ -50,11 +51,11 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-sky-50 to-white">
       {/* SEO Metadata (would typically be in a Head component) */}
       <div hidden>
-        <h1>Maximally Premium Probiotics | Advanced Gut Health Formula</h1>
-        <meta name="description" content="Transform your gut health with Maximally's premium probiotic - 50 billion CFU, 15 strains. Science-backed formula for digestive wellness, immune support, and overall vitality." />
+        <h1>Maximally Premium Probiotics | Advanced Gut Health Formula for Happy Living</h1>
+        <meta name="description" content="Refresh your gut health with Maximally's premium probiotic - 50 billion CFU, 15 strains. Science-backed formula for digestive wellness, immune support, and a happier, more vibrant you." />
       </div>
       
       {/* Navigation */}
@@ -70,22 +71,39 @@ const Index = () => {
         <FAQ />
         
         {/* Final CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-maximally-600 to-maximally-800 text-white">
+        <section className="py-20 bg-gradient-to-r from-cyan-500 to-blue-500 text-white relative overflow-hidden">
+          {/* Decorative wave shapes */}
+          <div className="absolute top-0 left-0 w-full h-12 opacity-20">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full">
+              <path fill="#ffffff" fillOpacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>
+          </div>
+
           <div className="maximally-container text-center">
+            <div className="flex justify-center mb-6">
+              <Waves className="w-12 h-12 text-white/70" />
+            </div>
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 max-w-3xl mx-auto">
-              Ready to Transform Your Gut Health?
+              Ready for a Happier, Healthier Gut?
             </h2>
             <p className="text-xl mb-10 max-w-2xl mx-auto">
-              Join thousands of satisfied customers who have experienced the Maximally difference.
+              Join thousands of happy customers who have transformed their digestive health with Maximally.
             </p>
             <CTAButton 
               text="Buy on Amazon Today" 
-              href="https://amazon.com" 
+              href="https://amazon.in" 
               variant="outline" 
               size="lg" 
               withArrow
               className="text-white border-white hover:bg-white/10 inline-block"
             />
+          </div>
+
+          {/* Bottom wave shapes */}
+          <div className="absolute bottom-0 left-0 w-full h-12 opacity-20">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full">
+              <path fill="#ffffff" fillOpacity="1" d="M0,96L48,106.7C96,117,192,139,288,138.7C384,139,480,117,576,96C672,75,768,53,864,69.3C960,85,1056,139,1152,154.7C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
           </div>
         </section>
       </main>
