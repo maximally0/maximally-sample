@@ -65,7 +65,7 @@ const BlogSection = () => {
               </p>
               <p>
                 I got sick of seeing people waste money on <strong>useless probiotics</strong>, so I did what any sane person would do—I 
-                <strong> fixed the entire industry</strong>. Welcome to <strong>Maximally</strong>—where probiotics actually do what they're supposed to do.
+                <strong>fixed the entire industry</strong>. Welcome to <strong>Maximally</strong>—where probiotics actually do what they're supposed to do.
               </p>
               
               <h4 className="text-xl font-bold text-cyan-800 mt-8 mb-4">What's Wrong With Today's Probiotic Supplements?</h4>
@@ -83,8 +83,8 @@ const BlogSection = () => {
                 <p className="font-bold">🚨 2. Useless Strains, Random Formulations</p>
                 <p>
                   Not all probiotics are created equal. Some strains actually do something, while others are just filler. Most brands 
-                  <strong> randomly mix strains together</strong>, hoping something sticks. That's like making a pizza by dumping 
-                  <strong> random ingredients into an oven and praying for a miracle.</strong> It doesn't work like that.
+                  <strong>randomly mix strains together</strong>, hoping something sticks. That's like making a pizza by dumping 
+                  <strong>random ingredients into an oven and praying for a miracle.</strong> It doesn't work like that.
                 </p>
               </div>
               
@@ -97,10 +97,10 @@ const BlogSection = () => {
               </div>
               
               <div className="mb-4">
-                <p className="font-bold">🚨 4. Buzzwords {'>'}  Science</p>
+                <p className="font-bold">🚨 4. Buzzwords > Science</p>
                 <p>
                   "Doctor Recommended." "50 Billion CFUs." "Revolutionary Formula." Sounds good, right? Well, here's a secret: 
-                  <strong> there are no regulations on these claims.</strong> A company could slap "GUT HEALTH MIRACLE" on a bottle of sugar pills, 
+                  <strong>there are no regulations on these claims.</strong> A company could slap "GUT HEALTH MIRACLE" on a bottle of sugar pills, 
                   and nobody would stop them. That's the wild reality of the supplement industry.
                 </p>
               </div>
@@ -119,7 +119,7 @@ const BlogSection = () => {
               <h4 className="text-xl font-bold text-cyan-800 mt-8 mb-4">How Maximally Fixes Everything</h4>
               <p>
                 At <strong>Maximally</strong>, I decided to fix every single issue in the industry. No gimmicks, no BS—just 
-                <strong> science-backed probiotics that actually work</strong>.
+                <strong>science-backed probiotics that actually work</strong>.
               </p>
               
               <div className="mb-4">
@@ -134,7 +134,7 @@ const BlogSection = () => {
                 <p className="font-bold">✅ Clinically Researched Strains That Do Something</p>
                 <p>
                   We don't throw in random strains for the sake of it. Every probiotic in <strong>Maximally</strong> has been 
-                  <strong> scientifically tested and proven</strong> to improve gut health. No filler, no fluff, just <strong>results</strong>.
+                  <strong>scientifically tested and proven</strong> to improve gut health. No filler, no fluff, just <strong>results</strong>.
                 </p>
               </div>
               
