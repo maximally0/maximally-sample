@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { ArrowRight, Waves, Sun } from 'lucide-react';
+import { ArrowRight, Waves } from 'lucide-react';
 
 interface CTAButtonProps {
   text: string;
@@ -25,8 +25,8 @@ const CTAButton = ({
   const baseClasses = "relative flex items-center justify-center font-display font-medium transition-all duration-300 ease-in-out rounded-full";
   
   const variantClasses = {
-    primary: "bg-gradient-to-r from-cyan-400 to-blue-400 text-white hover:shadow-lg hover:scale-105 active:scale-[0.98] hover:from-cyan-500 hover:to-blue-500",
-    outline: "border-2 border-cyan-400 text-cyan-600 hover:bg-cyan-50 hover:scale-105 active:scale-[0.98]",
+    primary: "bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:shadow-lg hover:scale-105 active:scale-[0.98]",
+    outline: "border-2 border-cyan-500 text-cyan-600 hover:bg-cyan-50 hover:scale-105 active:scale-[0.98]",
     text: "text-cyan-600 hover:text-cyan-700 underline-offset-4 hover:underline"
   };
   
