@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -57,11 +58,13 @@ export default {
           foreground: 'hsl(var(--card-foreground))'
         },
         bauhaus: {
-          red: '#ea384c',
+          red: '#FF4D4D',
           blue: '#00B8D4',
           cyan: '#00E5FF',
           teal: '#1DE9B6',
-          yellow: '#F9D342',
+          yellow: '#FFD700',
+          green: '#4ADE80',
+          orange: '#F97316',
           black: '#292929',
           offwhite: '#F3F3F3',
         },

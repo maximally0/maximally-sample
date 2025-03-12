@@ -59,11 +59,11 @@ const Index = () => {
         <meta name="description" content="Refresh your gut health with Maximally's premium probiotic - 50 billion CFU, 15 strains. Science-backed formula for digestive wellness, immune support, and a happier, more vibrant you." />
       </div>
       
-      {/* Bauhaus Decorative Elements */}
-      <div className="fixed -z-10 top-40 -left-20 w-40 h-40 bg-[#00BCD4] rounded-full opacity-20"></div>
-      <div className="fixed -z-10 top-1/4 right-0 w-60 h-60 bg-[#1DE9B6] opacity-10"></div>
-      <div className="fixed -z-10 bottom-1/4 left-1/3 w-20 h-20 bg-yellow-400 opacity-20"></div>
-      <div className="fixed -z-10 right-1/4 bottom-10 w-40 h-40 bg-[#00E5FF]/30 rounded-full"></div>
+      {/* Bauhaus Decorative Elements with bright colors */}
+      <div className="fixed -z-10 top-40 -left-20 w-40 h-40 bg-[#00BCD4] rounded-full opacity-30"></div>
+      <div className="fixed -z-10 top-1/4 right-0 w-60 h-60 bg-[#4ADE80] opacity-20"></div>
+      <div className="fixed -z-10 bottom-1/4 left-1/3 w-20 h-20 bg-[#FFD700] opacity-30"></div>
+      <div className="fixed -z-10 right-1/4 bottom-10 w-40 h-40 bg-[#FF4D4D]/30 rounded-full"></div>
       
       {/* Navigation */}
       <NavBar />
@@ -78,18 +78,18 @@ const Index = () => {
         <BlogSection />
         <FAQ />
         
-        {/* Final CTA Section */}
-        <section className="py-20 bg-[#00BCD4] text-white relative overflow-hidden">
-          {/* Bauhaus decorative elements */}
-          <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400 opacity-20 rotate-45"></div>
-          <div className="absolute top-10 right-10 w-20 h-20 bg-[#1DE9B6] opacity-20 rounded-full"></div>
-          <div className="absolute bottom-0 left-1/4 w-32 h-32 bg-white opacity-10"></div>
+        {/* Final CTA Section with bright gradient background */}
+        <section className="py-20 bg-gradient-to-r from-[#00BCD4] to-[#1DE9B6] text-white relative overflow-hidden">
+          {/* Bauhaus decorative elements with bright colors */}
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#FFD700] opacity-20 rotate-45"></div>
+          <div className="absolute top-10 right-10 w-20 h-20 bg-[#FF4D4D] opacity-20 rounded-full"></div>
+          <div className="absolute bottom-0 left-1/4 w-32 h-32 bg-[#4ADE80] opacity-20"></div>
 
           <div className="maximally-container text-center relative z-10">
             <div className="flex justify-center mb-6">
               <Square className="w-12 h-12 text-white/70" />
             </div>
-            <h2 className="font-sans text-4xl md:text-5xl font-bold mb-6 max-w-3xl mx-auto">
+            <h2 className="font-sans text-4xl md:text-5xl font-bold mb-6 max-w-3xl mx-auto drop-shadow-lg">
               Ready for a Happier, Healthier Gut?
             </h2>
             <p className="text-xl mb-10 max-w-2xl mx-auto">
@@ -98,10 +98,10 @@ const Index = () => {
             <CTAButton 
               text="Buy on Amazon Today" 
               href="https://amazon.in" 
-              variant="outline" 
+              variant="secondary" 
               size="lg" 
               withArrow
-              className="text-white border-white hover:bg-white/10 inline-block"
+              className="text-white hover:brightness-110 border-white hover:bg-white/10 inline-block shadow-lg"
             />
           </div>
         </section>
