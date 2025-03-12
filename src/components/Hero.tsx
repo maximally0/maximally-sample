@@ -1,11 +1,8 @@
-
 import React, { useEffect, useState } from 'react';
 import CTAButton from './CTAButton';
 import { Sparkles, CheckCircle2 } from 'lucide-react';
-
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  
   useEffect(() => {
     // Set loaded state after a small delay for animation purposes
     const timer = setTimeout(() => {
@@ -13,9 +10,7 @@ const Hero = () => {
     }, 100);
     return () => clearTimeout(timer);
   }, []);
-  
-  return (
-    <section className="min-h-screen relative flex items-center overflow-hidden pt-20">
+  return <section className="min-h-screen relative flex items-center overflow-hidden pt-20">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-2/3 h-2/3 bg-gradient-to-bl from-[#00E5FF]/70 to-transparent rounded-bl-[50%] opacity-80"></div>
@@ -43,11 +38,7 @@ const Hero = () => {
             </p>
             
             {/* Additional Description */}
-            <div className="bg-white/80 backdrop-blur-sm p-4 rounded-lg shadow-lg border-l-4 border-[#FF4D4D]">
-              <p className="text-gray-700">
-                At Maximally, we believe that your health deserves clarity, not marketing tricks. No gimmicks. No hidden formulas. Just research-backed nutrition that works.
-              </p>
-            </div>
+            
             
             {/* Benefits */}
             <div className="space-y-2">
@@ -103,11 +94,7 @@ const Hero = () => {
             <div className="relative">
               {/* Main Product Image */}
               <div className="relative z-10 animate-float">
-                <img 
-                  src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1260&q=80" 
-                  alt="Maximally Probiotic Bottle" 
-                  className="max-w-full h-auto rounded-lg shadow-xl"
-                />
+                <img alt="Maximally Probiotic Bottle" className="max-w-full h-auto rounded-lg shadow-xl" src="https://www.iffcotokio.co.in/content/dam/iffcotokio/iffco-images/blogs/gut-health.jpg" />
               </div>
               
               {/* Decorative Elements */}
@@ -127,8 +114,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
