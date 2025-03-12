@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -57,6 +56,13 @@ export default {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
         },
+        bauhaus: {
+          red: '#ea384c',
+          blue: '#1EAEDB',
+          yellow: '#F9D342',
+          black: '#292929',
+          offwhite: '#F3F3F3',
+        },
         maximally: {
           50: '#f2f7f9',
           100: '#e5eff4',
@@ -82,9 +88,8 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Playfair Display', 'Georgia', 'serif'],
-        display: ['Montserrat', 'system-ui', 'sans-serif'],
+        sans: ['Montserrat', 'system-ui', 'sans-serif'],
+        display: ['Poppins', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',
