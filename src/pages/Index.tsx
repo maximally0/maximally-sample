@@ -10,7 +10,7 @@ import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
 import BlogSection from '@/components/BlogSection';
-import { Square } from 'lucide-react';
+import { Microscope, CheckCircle2 } from 'lucide-react';
 
 const Index = () => {
   useEffect(() => {
@@ -55,12 +55,12 @@ const Index = () => {
     <div className="flex flex-col min-h-screen bg-[#f3f3f3]">
       {/* SEO Metadata (would typically be in a Head component) */}
       <div hidden>
-        <h1>Maximally Premium Probiotics | Advanced Gut Health Formula for Happy Living</h1>
-        <meta name="description" content="Refresh your gut health with Maximally's premium probiotic - 50 billion CFU, 15 strains. Science-backed formula for digestive wellness, immune support, and a happier, more vibrant you." />
+        <h1>Maximally Premium Probiotics | Radical Transparency. Proven Science. Maximum Results.</h1>
+        <meta name="description" content="At Maximally, we believe that your health deserves clarity, not marketing tricks. Our transparent, research-backed probiotics deliver 50 billion CFU and 15 diverse strains for optimal gut health." />
       </div>
       
       {/* Bauhaus Decorative Elements with bright colors */}
-      <div className="fixed -z-10 top-40 -left-20 w-40 h-40 bg-[#00BCD4] rounded-full opacity-30"></div>
+      <div className="fixed -z-10 top-40 -left-20 w-40 h-40 bg-[#00E5FF] rounded-full opacity-30"></div>
       <div className="fixed -z-10 top-1/4 right-0 w-60 h-60 bg-[#4ADE80] opacity-20"></div>
       <div className="fixed -z-10 bottom-1/4 left-1/3 w-20 h-20 bg-[#FFD700] opacity-30"></div>
       <div className="fixed -z-10 right-1/4 bottom-10 w-40 h-40 bg-[#FF4D4D]/30 rounded-full"></div>
@@ -79,7 +79,7 @@ const Index = () => {
         <FAQ />
         
         {/* Final CTA Section with bright gradient background */}
-        <section className="py-20 bg-gradient-to-r from-[#00BCD4] to-[#1DE9B6] text-white relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-r from-[#00E5FF] to-[#4ADE80] text-white relative overflow-hidden">
           {/* Bauhaus decorative elements with bright colors */}
           <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#FFD700] opacity-20 rotate-45"></div>
           <div className="absolute top-10 right-10 w-20 h-20 bg-[#FF4D4D] opacity-20 rounded-full"></div>
@@ -87,14 +87,35 @@ const Index = () => {
 
           <div className="maximally-container text-center relative z-10">
             <div className="flex justify-center mb-6">
-              <Square className="w-12 h-12 text-white/70" />
+              <Microscope className="w-12 h-12 text-white/90" />
             </div>
             <h2 className="font-sans text-4xl md:text-5xl font-bold mb-6 max-w-3xl mx-auto drop-shadow-lg">
-              Ready for a Happier, Healthier Gut?
+              Ready for Radical Transparency in Your Health?
             </h2>
             <p className="text-xl mb-10 max-w-2xl mx-auto">
-              Join thousands of happy customers who have transformed their digestive health with Maximally.
+              No gimmicks. No hidden formulas. Just research-backed nutrition that works.
             </p>
+            
+            {/* Transparent Formula Benefits */}
+            <div className="flex flex-wrap justify-center gap-4 mb-10">
+              <div className="flex items-center bg-white/10 backdrop-blur-sm px-5 py-3 rounded-lg">
+                <CheckCircle2 className="w-5 h-5 text-[#FFD700] mr-2" />
+                <span className="text-white font-medium">Clearer Skin & Hair</span>
+              </div>
+              <div className="flex items-center bg-white/10 backdrop-blur-sm px-5 py-3 rounded-lg">
+                <CheckCircle2 className="w-5 h-5 text-[#FFD700] mr-2" />
+                <span className="text-white font-medium">Enhanced Immunity</span>
+              </div>
+              <div className="flex items-center bg-white/10 backdrop-blur-sm px-5 py-3 rounded-lg">
+                <CheckCircle2 className="w-5 h-5 text-[#FFD700] mr-2" />
+                <span className="text-white font-medium">Better Digestion</span>
+              </div>
+              <div className="flex items-center bg-white/10 backdrop-blur-sm px-5 py-3 rounded-lg">
+                <CheckCircle2 className="w-5 h-5 text-[#FFD700] mr-2" />
+                <span className="text-white font-medium">Optimized Performance</span>
+              </div>
+            </div>
+            
             <CTAButton 
               text="Buy on Amazon Today" 
               href="https://amazon.in" 

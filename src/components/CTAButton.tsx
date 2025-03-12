@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { ArrowRight, Square } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 interface CTAButtonProps {
   text: string;
@@ -25,10 +25,10 @@ const CTAButton = ({
   const baseClasses = "relative flex items-center justify-center font-display font-medium transition-all duration-300 ease-in-out";
   
   const variantClasses = {
-    primary: "bg-[#00BCD4] text-white hover:shadow-lg hover:translate-y-[-2px] active:translate-y-[1px] hover:brightness-110",
-    secondary: "bg-[#F97316] text-white hover:shadow-lg hover:translate-y-[-2px] active:translate-y-[1px] hover:brightness-110",
-    outline: "border-2 border-[#00BCD4] text-[#00BCD4] hover:bg-[#00BCD4]/5 hover:translate-y-[-2px] active:translate-y-[1px]",
-    text: "text-[#00BCD4] hover:bg-[#00BCD4]/5 underline-offset-4 hover:underline"
+    primary: "bg-[#00E5FF] text-white hover:shadow-lg hover:translate-y-[-2px] active:translate-y-[1px] hover:brightness-110 sharp-border-cyan",
+    secondary: "bg-[#FF4D4D] text-white hover:shadow-lg hover:translate-y-[-2px] active:translate-y-[1px] hover:brightness-110 sharp-border-red",
+    outline: "border-2 border-[#00E5FF] text-[#00E5FF] hover:bg-[#00E5FF]/5 hover:translate-y-[-2px] active:translate-y-[1px]",
+    text: "text-[#00E5FF] hover:bg-[#00E5FF]/5 underline-offset-4 hover:underline"
   };
   
   const sizeClasses = {
@@ -53,7 +53,7 @@ const CTAButton = ({
     >
       {/* Decorative Square (Bauhaus element) */}
       {variant === 'primary' && (
-        <div className="absolute -left-2 -top-2 w-4 h-4 bg-yellow-400 rotate-12"></div>
+        <div className="absolute -left-2 -top-2 w-4 h-4 bg-[#FFD700] rotate-12"></div>
       )}
       
       <span className="z-10 font-sans font-bold tracking-wide">{text}</span>
