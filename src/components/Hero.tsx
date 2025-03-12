@@ -1,22 +1,16 @@
-
 import React, { useEffect, useState } from 'react';
 import CTAButton from './CTAButton';
 import { Sparkles } from 'lucide-react';
-
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
     // Set loaded state after a small delay for animation purposes
     const timer = setTimeout(() => {
       setIsLoaded(true);
     }, 100);
-    
     return () => clearTimeout(timer);
   }, []);
-
-  return (
-    <section className="min-h-screen relative flex items-center overflow-hidden pt-20">
+  return <section className="min-h-screen relative flex items-center overflow-hidden pt-20">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-2/3 h-2/3 bg-gradient-to-bl from-maximally-100/70 to-transparent rounded-bl-[50%] opacity-80"></div>
@@ -45,52 +39,27 @@ const Hero = () => {
             
             {/* CTA Section */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <CTAButton 
-                text="Buy on Amazon" 
-                href="https://amazon.com" 
-                variant="primary" 
-                size="lg" 
-                withArrow
-                className="sm:w-auto w-full"
-              />
-              <CTAButton 
-                text="Learn More" 
-                href="#benefits" 
-                variant="outline" 
-                size="lg"
-                className="sm:w-auto w-full"
-              />
+              <CTAButton text="Buy on Amazon" href="https://amazon.com" variant="primary" size="lg" withArrow className="sm:w-auto w-full" />
+              <CTAButton text="Learn More" href="#benefits" variant="outline" size="lg" className="sm:w-auto w-full" />
             </div>
             
             {/* Trust Badges */}
             <div className="flex flex-wrap items-center gap-6 mt-8 pt-2">
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm p-2">
-                  <img 
-                    src="https://cdn-icons-png.flaticon.com/512/3263/3263268.png" 
-                    alt="GMP Certified" 
-                    className="w-8 h-8 object-contain"
-                  />
+                  <img src="https://cdn-icons-png.flaticon.com/512/3263/3263268.png" alt="GMP Certified" className="w-8 h-8 object-contain" />
                 </div>
                 <span className="ml-2 text-sm font-medium">GMP Certified</span>
               </div>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm p-2">
-                  <img 
-                    src="https://cdn-icons-png.flaticon.com/512/2767/2767194.png" 
-                    alt="Lab Tested" 
-                    className="w-8 h-8 object-contain"
-                  />
+                  <img src="https://cdn-icons-png.flaticon.com/512/2767/2767194.png" alt="Lab Tested" className="w-8 h-8 object-contain" />
                 </div>
                 <span className="ml-2 text-sm font-medium">Lab Tested</span>
               </div>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm p-2">
-                  <img 
-                    src="https://cdn-icons-png.flaticon.com/512/6780/6780958.png" 
-                    alt="Non-GMO" 
-                    className="w-8 h-8 object-contain"
-                  />
+                  <img src="https://cdn-icons-png.flaticon.com/512/6780/6780958.png" alt="Non-GMO" className="w-8 h-8 object-contain" />
                 </div>
                 <span className="ml-2 text-sm font-medium">Non-GMO</span>
               </div>
@@ -102,11 +71,7 @@ const Hero = () => {
             <div className="relative">
               {/* Main Product Image */}
               <div className="relative z-10 animate-float">
-                <img 
-                  src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1260&q=80" 
-                  alt="Maximally Probiotic Bottle" 
-                  className="max-w-full h-auto rounded-lg shadow-xl"
-                />
+                
               </div>
               
               {/* Decorative Elements */}
@@ -126,8 +91,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
