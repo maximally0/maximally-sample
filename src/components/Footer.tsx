@@ -13,14 +13,14 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h3 className="font-serif text-2xl font-bold mb-4">Maximally</h3>
             <p className="text-maximally-100 mb-6 max-w-md">
-              Transforming gut health with premium, scientifically-formulated probiotics that deliver real results.
+              Health on Max, Gimmicks on Zero. Transforming gut health with premium, scientifically-formulated probiotics that deliver real results.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-maximally-100 hover:text-white transition-colors">
                 <Facebook className="w-5 h-5" />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a href="#" className="text-maximally-100 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/maximally.in/" className="text-maximally-100 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-5 h-5" />
                 <span className="sr-only">Instagram</span>
               </a>
@@ -62,8 +62,8 @@ const Footer = () => {
           <div>
             <h4 className="font-medium text-white mb-4">Contact Us</h4>
             <ul className="space-y-2 text-maximally-100">
-              <li>support@maximallyhealth.com</li>
-              <li>1-800-MAXIMIZE</li>
+              <li>hello@maximally.in</li>
+              <li>+91 9041260790</li>
               <li>100 Wellness Way,<br />Health Center, CA 90210</li>
             </ul>
           </div>

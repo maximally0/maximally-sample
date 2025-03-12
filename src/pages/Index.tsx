@@ -9,7 +9,6 @@ import Reviews from '@/components/Reviews';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
-import BlogSection from '@/components/BlogSection';
 import { Microscope, CheckCircle2 } from 'lucide-react';
 
 const Index = () => {
@@ -55,7 +54,7 @@ const Index = () => {
     <div className="flex flex-col min-h-screen bg-[#f3f3f3]">
       {/* SEO Metadata (would typically be in a Head component) */}
       <div hidden>
-        <h1>Maximally Premium Probiotics | Radical Transparency. Proven Science. Maximum Results.</h1>
+        <h1>Maximally Premium Probiotics | Health on Max, Gimmicks on Zero.</h1>
         <meta name="description" content="At Maximally, we believe that your health deserves clarity, not marketing tricks. Our transparent, research-backed probiotics deliver 50 billion CFU and 15 diverse strains for optimal gut health." />
       </div>
       
@@ -75,7 +74,6 @@ const Index = () => {
         <HowItWorks />
         <TrustElements />
         <Reviews />
-        <BlogSection />
         <FAQ />
         
         {/* Final CTA Section with bright gradient background */}
@@ -93,7 +91,7 @@ const Index = () => {
               Ready for Radical Transparency in Your Health?
             </h2>
             <p className="text-xl mb-10 max-w-2xl mx-auto">
-              No gimmicks. No hidden formulas. Just research-backed nutrition that works.
+              Health on Max, Gimmicks on Zero. Just research-backed nutrition that works.
             </p>
             
             {/* Transparent Formula Benefits */}

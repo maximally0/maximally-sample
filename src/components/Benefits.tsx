@@ -126,7 +126,7 @@ const Benefits = () => {
         {/* Section Title */}
         <div ref={titleRef} className="reveal-on-scroll text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-3 py-1 rounded-full bg-[#FFD700] text-gray-800 text-sm font-medium mb-4 shadow-md">
-            Science-Backed Benefits
+            Health on Max, Gimmicks on Zero
           </span>
           <h2 className="section-title mb-6">Why Choose Maximally Probiotics?</h2>
           <p className="text-lg text-gray-600">
