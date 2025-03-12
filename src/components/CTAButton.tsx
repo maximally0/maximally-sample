@@ -25,10 +25,10 @@ const CTAButton = ({
   const baseClasses = "relative flex items-center justify-center font-display font-medium transition-all duration-300 ease-in-out";
   
   const variantClasses = {
-    primary: "bg-[#ea384c] text-white hover:shadow-lg hover:translate-y-[-2px] active:translate-y-[1px]",
-    secondary: "bg-[#1EAEDB] text-white hover:shadow-lg hover:translate-y-[-2px] active:translate-y-[1px]",
-    outline: "border-2 border-[#ea384c] text-[#ea384c] hover:bg-[#ea384c]/5 hover:translate-y-[-2px] active:translate-y-[1px]",
-    text: "text-[#ea384c] hover:bg-[#ea384c]/5 underline-offset-4 hover:underline"
+    primary: "bg-[#00BCD4] text-white hover:shadow-lg hover:translate-y-[-2px] active:translate-y-[1px]",
+    secondary: "bg-[#1DE9B6] text-white hover:shadow-lg hover:translate-y-[-2px] active:translate-y-[1px]",
+    outline: "border-2 border-[#00BCD4] text-[#00BCD4] hover:bg-[#00BCD4]/5 hover:translate-y-[-2px] active:translate-y-[1px]",
+    text: "text-[#00BCD4] hover:bg-[#00BCD4]/5 underline-offset-4 hover:underline"
   };
   
   const sizeClasses = {

@@ -60,10 +60,10 @@ const Index = () => {
       </div>
       
       {/* Bauhaus Decorative Elements */}
-      <div className="fixed -z-10 top-40 -left-20 w-40 h-40 bg-[#1EAEDB] rounded-full opacity-20"></div>
-      <div className="fixed -z-10 top-1/4 right-0 w-60 h-60 bg-[#ea384c] opacity-10"></div>
+      <div className="fixed -z-10 top-40 -left-20 w-40 h-40 bg-[#00BCD4] rounded-full opacity-20"></div>
+      <div className="fixed -z-10 top-1/4 right-0 w-60 h-60 bg-[#1DE9B6] opacity-10"></div>
       <div className="fixed -z-10 bottom-1/4 left-1/3 w-20 h-20 bg-yellow-400 opacity-20"></div>
-      <div className="fixed -z-10 right-1/4 bottom-10 w-40 h-40 bg-[#1EAEDB]/30 rounded-full"></div>
+      <div className="fixed -z-10 right-1/4 bottom-10 w-40 h-40 bg-[#00E5FF]/30 rounded-full"></div>
       
       {/* Navigation */}
       <NavBar />
@@ -79,10 +79,10 @@ const Index = () => {
         <FAQ />
         
         {/* Final CTA Section */}
-        <section className="py-20 bg-[#ea384c] text-white relative overflow-hidden">
+        <section className="py-20 bg-[#00BCD4] text-white relative overflow-hidden">
           {/* Bauhaus decorative elements */}
           <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400 opacity-20 rotate-45"></div>
-          <div className="absolute top-10 right-10 w-20 h-20 bg-[#1EAEDB] opacity-20 rounded-full"></div>
+          <div className="absolute top-10 right-10 w-20 h-20 bg-[#1DE9B6] opacity-20 rounded-full"></div>
           <div className="absolute bottom-0 left-1/4 w-32 h-32 bg-white opacity-10"></div>
 
           <div className="maximally-container text-center relative z-10">
