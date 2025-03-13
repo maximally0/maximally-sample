@@ -3,7 +3,7 @@ import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
-import { CheckCircle2, BookOpen, Flask, Award, Microscope } from 'lucide-react';
+import { CheckCircle2, BookOpen, Beaker, Award, Microscope } from 'lucide-react';
 
 const LearnMore = () => {
   return (
@@ -105,7 +105,7 @@ const LearnMore = () => {
               {/* Future Product Cards */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden opacity-60 transition-transform hover:scale-105">
                 <div className="h-48 bg-[#4ADE80]/10 flex items-center justify-center">
-                  <Flask className="w-16 h-16 text-[#4ADE80]" />
+                  <Beaker className="w-16 h-16 text-[#4ADE80]" />
                 </div>
                 <div className="p-6">
                   <h3 className="font-serif text-xl font-bold mb-2 text-maximally-900">Coming Soon</h3>
