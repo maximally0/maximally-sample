@@ -1,13 +1,9 @@
-
 import React from 'react';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="bg-maximally-900 text-white pt-16 pb-8">
+  return <footer className="bg-maximally-900 text-white pt-16 pb-8">
       <div className="maximally-container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
@@ -65,7 +61,7 @@ const Footer = () => {
             <ul className="space-y-2 text-maximally-100">
               <li>hello@maximally.in</li>
               <li>+91 9041260790</li>
-              <li>100 Wellness Way,<br />Health Center, CA 90210</li>
+              <li className="">100 Wellness Way,<br />Health Center, CA 90210</li>
             </ul>
           </div>
         </div>
@@ -93,8 +89,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
