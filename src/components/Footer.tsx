@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -36,23 +37,23 @@ const Footer = () => {
             <h4 className="font-medium text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#benefits" className="text-maximally-100 hover:text-white transition-colors">
-                  Benefits
-                </a>
+                <Link to="/learn-more" className="text-maximally-100 hover:text-white transition-colors">
+                  Learn More
+                </Link>
               </li>
               <li>
-                <a href="#how-it-works" className="text-maximally-100 hover:text-white transition-colors">
-                  How It Works
-                </a>
+                <Link to="/blog" className="text-maximally-100 hover:text-white transition-colors">
+                  Blog
+                </Link>
               </li>
               <li>
-                <a href="#reviews" className="text-maximally-100 hover:text-white transition-colors">
-                  Reviews
-                </a>
+                <Link to="/formulation" className="text-maximally-100 hover:text-white transition-colors">
+                  Formulation
+                </Link>
               </li>
               <li>
-                <a href="#faq" className="text-maximally-100 hover:text-white transition-colors">
-                  FAQ
+                <a href="mailto:hello@maximally.in" className="text-maximally-100 hover:text-white transition-colors">
+                  Contact
                 </a>
               </li>
             </ul>
@@ -76,15 +77,15 @@ const Footer = () => {
               &copy; {currentYear} Maximally Health, Inc. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="text-maximally-200 hover:text-white transition-colors">
+              <Link to="/privacy" className="text-maximally-200 hover:text-white transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-maximally-200 hover:text-white transition-colors">
+              </Link>
+              <Link to="/terms" className="text-maximally-200 hover:text-white transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="text-maximally-200 hover:text-white transition-colors">
+              </Link>
+              <Link to="/shipping" className="text-maximally-200 hover:text-white transition-colors">
                 Shipping Policy
-              </a>
+              </Link>
             </div>
           </div>
           <div className="mt-6 text-xs text-maximally-300">

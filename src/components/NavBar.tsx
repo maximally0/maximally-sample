@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import CTAButton from './CTAButton';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,24 +35,21 @@ const NavBar = () => {
       )}
     >
       <div className="maximally-container flex items-center justify-between">
-        <a href="/" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <span className="font-serif text-2xl font-bold tracking-tight text-maximally-800">Maximally</span>
-        </a>
+        </Link>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#benefits" className="font-medium text-maximally-800 hover:text-maximally-600 transition-colors">
-            Benefits
-          </a>
-          <a href="#how-it-works" className="font-medium text-maximally-800 hover:text-maximally-600 transition-colors">
-            How It Works
-          </a>
-          <a href="#reviews" className="font-medium text-maximally-800 hover:text-maximally-600 transition-colors">
-            Reviews
-          </a>
-          <a href="#faq" className="font-medium text-maximally-800 hover:text-maximally-600 transition-colors">
-            FAQ
-          </a>
+          <Link to="/learn-more" className="font-medium text-maximally-800 hover:text-maximally-600 transition-colors">
+            Learn More
+          </Link>
+          <Link to="/blog" className="font-medium text-maximally-800 hover:text-maximally-600 transition-colors">
+            Blog
+          </Link>
+          <Link to="/formulation" className="font-medium text-maximally-800 hover:text-maximally-600 transition-colors">
+            Formulation
+          </Link>
           <CTAButton 
             text="Buy on Amazon" 
             href="https://amazon.com" 
@@ -83,34 +81,27 @@ const NavBar = () => {
         )}
       >
         <nav className="flex flex-col space-y-6">
-          <a 
-            href="#benefits" 
+          <Link 
+            to="/learn-more" 
             className="text-xl font-medium text-maximally-800 hover:text-maximally-600 transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
-            Benefits
-          </a>
-          <a 
-            href="#how-it-works" 
+            Learn More
+          </Link>
+          <Link 
+            to="/blog" 
             className="text-xl font-medium text-maximally-800 hover:text-maximally-600 transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
-            How It Works
-          </a>
-          <a 
-            href="#reviews" 
+            Blog
+          </Link>
+          <Link 
+            to="/formulation" 
             className="text-xl font-medium text-maximally-800 hover:text-maximally-600 transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
-            Reviews
-          </a>
-          <a 
-            href="#faq" 
-            className="text-xl font-medium text-maximally-800 hover:text-maximally-600 transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            FAQ
-          </a>
+            Formulation
+          </Link>
           <CTAButton 
             text="Buy on Amazon" 
             href="https://amazon.com" 

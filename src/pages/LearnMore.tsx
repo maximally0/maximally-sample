@@ -6,6 +6,7 @@ import CTAButton from '@/components/CTAButton';
 import { CheckCircle2, BookOpen, Beaker, Award, Microscope } from 'lucide-react';
 
 const LearnMore = () => {
+  console.log("LearnMore page is rendering");
   return (
     <div className="flex flex-col min-h-screen bg-[#f3f3f3]">
       <NavBar />
