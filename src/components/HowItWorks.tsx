@@ -81,8 +81,8 @@ const HowItWorks = () => {
   const steps = [
     {
       number: 1,
-      title: "Take One Fully Disclosed Capsule Daily",
-      description: "For optimal results, take one Maximally probiotic capsule with your morning meal. Our verified enteric coating ensures probiotics reach your intestines alive and effective.",
+      title: "Take Two Capsules Daily",
+      description: "For optimal results, take two Maximally probiotic capsules daily – one before breakfast and one before dinner. Our verified enteric coating ensures probiotics reach your intestines alive and effective.",
       delay: 100
     },
     {
@@ -181,7 +181,7 @@ const HowItWorks = () => {
             <div className="mt-8">
               <CTAButton 
                 text="Experience the Transparent Difference" 
-                href="https://amazon.com" 
+                href="/formulation" 
                 variant="primary" 
                 size="lg" 
                 withArrow

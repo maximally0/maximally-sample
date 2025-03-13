@@ -1,6 +1,9 @@
+
 import React, { useEffect, useState } from 'react';
 import CTAButton from './CTAButton';
 import { Sparkles, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
@@ -33,7 +36,9 @@ const Hero = () => {
             </h1>
             
             {/* Subheading */}
-            
+            <p className="text-lg md:text-xl text-gray-700 max-w-xl">
+              🔬 50 Billion CFU | 15 Diverse Strains | Science-Backed Digestive Wellness
+            </p>
             
             {/* Additional Description */}
             
@@ -61,7 +66,7 @@ const Hero = () => {
             {/* CTA Section */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <CTAButton text="Buy on Amazon" href="https://amazon.com" variant="primary" size="lg" withArrow className="sm:w-auto w-full" />
-              <CTAButton text="Learn More" href="#benefits" variant="outline" size="lg" className="sm:w-auto w-full" />
+              <CTAButton text="Learn More" href="/learn-more" variant="outline" size="lg" className="sm:w-auto w-full" />
             </div>
             
             {/* Trust Badges */}
