@@ -3,7 +3,7 @@ import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
-import { Rocket, HandShake, UserPlus, Activity, Award, GraduationCap } from 'lucide-react';
+import { Rocket, Handshake, UserPlus, Activity, Award, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 
