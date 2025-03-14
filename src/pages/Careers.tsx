@@ -108,7 +108,7 @@ const Careers = () => {
                 <BenefitCard 
                   title="Open Culture" 
                   description="Got a crazy idea? Let's make it happen! We embrace innovation and creative thinking."
-                  icon={HandShake}
+                  icon={Handshake}
                 />
                 <BenefitCard 
                   title="Learning Opportunities" 
@@ -152,7 +152,7 @@ const Careers = () => {
                 <JobCard 
                   title="Open Collaboration" 
                   description="If you love what we do, but don't see a perfect role, apply anyway! We're always looking for amazing people." 
-                  icon={HandShake}
+                  icon={Handshake}
                 />
               </div>
               
