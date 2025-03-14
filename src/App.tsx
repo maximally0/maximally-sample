@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import LearnMore from "./pages/LearnMore";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Formulation from "./pages/Formulation";
 import Influencers from "./pages/Influencers";
 import Careers from "./pages/Careers";
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/learn-more" element={<LearnMore />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/formulation" element={<Formulation />} />
           <Route path="/influencers" element={<Influencers />} />
           <Route path="/careers" element={<Careers />} />
