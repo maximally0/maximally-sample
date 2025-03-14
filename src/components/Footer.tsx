@@ -1,6 +1,9 @@
+
 import React from 'react';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import CTAButton from './CTAButton';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-maximally-900 text-white pt-16 pb-8">
@@ -48,6 +51,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/influencers" className="text-maximally-100 hover:text-white transition-colors">
+                  Join Our Influencer Network
+                </Link>
+              </li>
+              <li>
                 <a href="mailto:hello@maximally.in" className="text-maximally-100 hover:text-white transition-colors">
                   Contact
                 </a>
@@ -64,6 +72,18 @@ const Footer = () => {
               <li className="">100 Wellness Way,<br />Health Center, CA 90210</li>
             </ul>
           </div>
+        </div>
+        
+        {/* Influencer CTA */}
+        <div className="flex flex-col items-center mb-12">
+          <h4 className="font-medium text-white mb-4 text-xl">Are you an influencer?</h4>
+          <CTAButton 
+            text="Join Our Influencer Network" 
+            href="/influencers" 
+            variant="outline" 
+            size="md"
+            withArrow={true}
+          />
         </div>
         
         {/* Bottom Bar */}

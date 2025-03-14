@@ -40,7 +40,7 @@ const NavBar = () => {
         </Link>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-6">
           <Link to="/learn-more" className="font-medium text-maximally-800 hover:text-maximally-600 transition-colors">
             Learn More
           </Link>
@@ -49,6 +49,9 @@ const NavBar = () => {
           </Link>
           <Link to="/formulation" className="font-medium text-maximally-800 hover:text-maximally-600 transition-colors">
             Formulation
+          </Link>
+          <Link to="/influencers" className="font-medium text-maximally-800 hover:text-maximally-600 transition-colors">
+            Join Our Influencer Network
           </Link>
           <CTAButton 
             text="Buy on Amazon" 
@@ -101,6 +104,13 @@ const NavBar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Formulation
+          </Link>
+          <Link 
+            to="/influencers" 
+            className="text-xl font-medium text-maximally-800 hover:text-maximally-600 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Join Our Influencer Network
           </Link>
           <CTAButton 
             text="Buy on Amazon" 
