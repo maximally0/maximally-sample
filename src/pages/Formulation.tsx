@@ -1,8 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
-import { FileText, ChevronDown, ChevronUp, Microscope, BrainCircuit, Heart, Activity, Eye } from 'lucide-react';
+import { FileText, ChevronDown, ChevronUp, Microscope, BrainCircuit, Heart, Activity, Eye, AlertTriangle } from 'lucide-react';
 
 // Sample formulation data (in a real app this would be fetched from an API or markdown file)
 const formulationData = [{
@@ -91,6 +92,7 @@ const categories = [{
   name: "Cognitive Health",
   icon: Eye
 }];
+
 const FormulationItem = ({
   item
 }: {
@@ -124,16 +126,15 @@ const FormulationItem = ({
               </li>)}
           </ul>
           
-          <a href={item.researchUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[#00E5FF] font-medium hover:underline">
-            <FileText className="w-4 h-4 mr-1" />
-            View Research
-          </a>
+          {/* View Research button has been removed */}
         </div>}
     </div>;
 };
+
 const Formulation = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [filteredItems, setFilteredItems] = useState(formulationData);
+  
   useEffect(() => {
     if (selectedCategory === "All") {
       setFilteredItems(formulationData);
@@ -141,6 +142,7 @@ const Formulation = () => {
       setFilteredItems(formulationData.filter(item => item.category === selectedCategory));
     }
   }, [selectedCategory]);
+  
   return <div className="flex flex-col min-h-screen bg-[#f3f3f3]">
       <NavBar />
       
@@ -189,6 +191,19 @@ const Formulation = () => {
                 {filteredItems.length > 0 ? filteredItems.map(item => <FormulationItem key={item.id} item={item} />) : <div className="text-center py-12">
                     <p className="text-gray-500">No ingredients found in this category.</p>
                   </div>}
+              </div>
+            </div>
+            
+            {/* Disclaimer Section (Added) */}
+            <div className="max-w-3xl mx-auto mt-12 p-6 bg-gray-50 border border-gray-200 rounded-lg">
+              <div className="flex items-start gap-4">
+                <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-bold text-gray-900 mb-2">Disclaimer</h3>
+                  <p className="text-gray-700">
+                    While probiotics provide various health benefits, they may also cause mild digestive issues such as bloating, gas, or stomach discomfort in some individuals. Those with weakened immune systems or underlying health conditions should consult a healthcare professional before use. Individual results may vary.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -290,4 +305,5 @@ const Formulation = () => {
       <Footer />
     </div>;
 };
+
 export default Formulation;
