@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import BlogPostHero from '@/components/blog/BlogPostHero';
@@ -15,9 +15,15 @@ import { blogPosts } from './BlogData';
 
 const BlogPost = () => {
   const { slug } = useParams();
+  const navigate = useNavigate();
   
   // Find the blog post by slug
   const post = blogPosts.find(post => post.slug === slug);
+  
+  // Scroll to top on page load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
   
   // If post not found, show error
   if (!post) {
@@ -41,7 +47,7 @@ const BlogPost = () => {
     );
   }
   
-  // Related posts (same category)
+  // Related posts (same category, exclude current post)
   const relatedPosts = blogPosts
     .filter(p => p.category === post.category && p.id !== post.id)
     .slice(0, 3);
@@ -54,7 +60,7 @@ const BlogPost = () => {
         <BlogPostHero post={post} />
         <FeaturedImage image={post.image} title={post.title} />
         <BlogContent post={post} />
-        <RelatedArticles posts={relatedPosts} />
+        {relatedPosts.length > 0 && <RelatedArticles posts={relatedPosts} />}
         <CTASection />
       </main>
       
