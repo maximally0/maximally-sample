@@ -1,4 +1,9 @@
 
+export interface ExternalLink {
+  title: string;
+  url: string;
+}
+
 export interface BlogPost {
   id: number;
   title: string;
@@ -9,4 +14,5 @@ export interface BlogPost {
   slug: string;
   image: string;
   content?: string;
+  externalLinks?: ExternalLink[];
 }
