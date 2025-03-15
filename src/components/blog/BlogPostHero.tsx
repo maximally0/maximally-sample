@@ -3,6 +3,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CalendarDays, Clock, ArrowLeft, Share2 } from 'lucide-react';
 import { BlogPost } from '@/types/blog';
+import { cn } from '@/lib/utils';
+import { toast } from 'sonner';
 
 interface BlogPostHeroProps {
   post: BlogPost;
@@ -22,12 +24,16 @@ const BlogPostHero = ({ post }: BlogPostHeroProps) => {
     } else {
       // Fallback - copy to clipboard
       navigator.clipboard.writeText(window.location.href);
-      alert('Link copied to clipboard!');
+      toast.success('Link copied to clipboard!');
     }
   };
   
   return (
-    <section className="pt-16 pb-10 md:pt-24 border-b border-gray-200 bg-gray-50">
+    <section className={cn(
+      "pt-16 pb-10 md:pt-24 border-b border-gray-200",
+      post.heroLayout === 'wide' ? 'bg-white' : 'bg-gray-50',
+      post.heroLayout === 'fullscreen' ? 'min-h-[50vh] flex items-center' : ''
+    )}>
       <div className="maximally-container">
         <button 
           onClick={() => navigate('/blog')}
@@ -62,12 +68,28 @@ const BlogPostHero = ({ post }: BlogPostHeroProps) => {
           
           <div className="flex justify-between items-center">
             <div className="flex items-center">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#00E5FF] to-[#32a0f8] flex items-center justify-center text-white font-bold">
-                M
+              <div className={cn(
+                "w-10 h-10 rounded-full flex items-center justify-center text-white font-bold",
+                post.authorImage ? "p-0 overflow-hidden" : "bg-gradient-to-r from-[#00E5FF] to-[#32a0f8]"
+              )}>
+                {post.authorImage ? (
+                  <img 
+                    src={post.authorImage} 
+                    alt={post.author || "Author"} 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      target.parentElement!.innerHTML = 'M';
+                    }}
+                  />
+                ) : (
+                  "M"
+                )}
               </div>
               <div className="ml-3">
-                <p className="font-medium text-maximally-900">Maximally Team</p>
-                <p className="text-sm text-gray-500">Health & Wellness Experts</p>
+                <p className="font-medium text-maximally-900">{post.author || "Maximally Team"}</p>
+                <p className="text-sm text-gray-500">{post.authorTitle || "Health & Wellness Experts"}</p>
               </div>
             </div>
             

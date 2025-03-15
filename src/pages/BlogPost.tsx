@@ -59,7 +59,7 @@ const BlogPost = () => {
       
       <main className="flex-grow pt-20">
         <BlogPostHero post={post} />
-        <FeaturedImage image={post.image} title={post.title} />
+        {post.image && <FeaturedImage image={post.image} title={post.title} />}
         <BlogContent post={post} />
         
         {/* External Links Section (if available) */}

@@ -15,4 +15,12 @@ export interface BlogPost {
   image: string;
   content?: string;
   externalLinks?: ExternalLink[];
+  
+  // Adding new fields to enhance content display
+  author?: string;
+  authorTitle?: string;
+  authorImage?: string;
+  tags?: string[];
+  featured?: boolean;
+  heroLayout?: 'standard' | 'wide' | 'fullscreen';
 }
