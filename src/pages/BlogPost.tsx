@@ -30,10 +30,10 @@ const BlogPost = () => {
     return (
       <div className="flex flex-col min-h-screen">
         <NavBar />
-        <main className="flex-grow flex items-center justify-center">
-          <div className="text-center p-8">
-            <h1 className="text-3xl font-bold mb-4">Article Not Found</h1>
-            <p className="mb-6">Sorry, the article you're looking for doesn't exist or has been moved.</p>
+        <main className="flex-grow flex items-center justify-center bg-gray-50">
+          <div className="text-center p-8 max-w-lg mx-auto bg-white rounded-xl shadow-md">
+            <h1 className="text-3xl font-bold mb-4 text-maximally-900">Article Not Found</h1>
+            <p className="mb-6 text-gray-600">Sorry, the article you're looking for doesn't exist or has been moved.</p>
             <CTAButton 
               text="Back to Blog" 
               href="/blog" 
