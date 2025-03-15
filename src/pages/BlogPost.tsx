@@ -9,7 +9,6 @@ import BlogContent from '@/components/blog/BlogContent';
 import RelatedArticles from '@/components/blog/RelatedArticles';
 import CTASection from '@/components/blog/CTASection';
 import CTAButton from '@/components/CTAButton';
-import { ExternalLink } from 'lucide-react';
 
 // Import the blog posts data
 import { blogPosts } from './BlogData';
@@ -61,43 +60,6 @@ const BlogPost = () => {
         <BlogPostHero post={post} />
         <FeaturedImage image={post.image} title={post.title} />
         <BlogContent post={post} />
-        
-        {/* External Links Section (if available) */}
-        {post.externalLinks && post.externalLinks.length > 0 && (
-          <section className="py-10 bg-gray-50">
-            <div className="maximally-container">
-              <div className="max-w-3xl mx-auto">
-                <h3 className="font-serif text-xl font-bold mb-6 text-maximally-900">
-                  Additional Resources & References
-                </h3>
-                <div className="space-y-4">
-                  {post.externalLinks.map((link, index) => (
-                    <a 
-                      key={index}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center p-4 bg-white rounded-lg border border-gray-200 hover:border-[#00E5FF] transition-colors group"
-                    >
-                      <div className="mr-4 flex-shrink-0 w-10 h-10 bg-[#00E5FF]/10 rounded-full flex items-center justify-center">
-                        <ExternalLink className="w-5 h-5 text-[#00E5FF] group-hover:scale-110 transition-transform" />
-                      </div>
-                      <div>
-                        <p className="font-medium text-maximally-900 group-hover:text-[#00E5FF] transition-colors">
-                          {link.title}
-                        </p>
-                        <p className="text-sm text-gray-500 truncate max-w-md">
-                          {link.url}
-                        </p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
-        
         {relatedPosts.length > 0 && <RelatedArticles posts={relatedPosts} />}
         <CTASection />
       </main>
