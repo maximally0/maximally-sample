@@ -35,7 +35,7 @@ const NavBar = () => {
       )}
     >
       <div className="maximally-container flex items-center justify-between">
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center" aria-label="Maximally Home">
           <span className="font-serif text-2xl font-bold tracking-tight text-maximally-800">Maximally</span>
         </Link>
         

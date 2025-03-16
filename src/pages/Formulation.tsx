@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
-import { FileText, ChevronDown, ChevronUp, Microscope, BrainCircuit, Heart, Activity, Eye, AlertTriangle } from 'lucide-react';
+import { FileText, ChevronDown, ChevronUp, Microscope, BrainCircuit, AlertTriangle } from 'lucide-react';
 
 // Sample formulation data (in a real app this would be fetched from an API or markdown file)
 const formulationData = [{
@@ -72,7 +72,7 @@ const formulationData = [{
   category: "Prebiotics"
 }];
 
-// Categories with icons
+// Categories with icons - Modified to only include All, Probiotics, and Prebiotics
 const categories = [{
   name: "All",
   icon: FileText
@@ -82,15 +82,6 @@ const categories = [{
 }, {
   name: "Prebiotics",
   icon: BrainCircuit
-}, {
-  name: "Digestive Support",
-  icon: Heart
-}, {
-  name: "Immunity",
-  icon: Activity
-}, {
-  name: "Cognitive Health",
-  icon: Eye
 }];
 
 const FormulationItem = ({
@@ -135,7 +126,11 @@ const Formulation = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [filteredItems, setFilteredItems] = useState(formulationData);
   
+  // Added SEO-friendly title and description
   useEffect(() => {
+    document.title = "Maximally Formulation | Best Probiotic Supplements in India";
+    
+    // Update filtering logic
     if (selectedCategory === "All") {
       setFilteredItems(formulationData);
     } else {
@@ -147,12 +142,12 @@ const Formulation = () => {
       <NavBar />
       
       <main className="flex-grow pt-20">
-        {/* Hero Section */}
+        {/* Hero Section with SEO-optimized headings */}
         <section className="py-16 md:py-24 bg-gradient-to-r from-[#00E5FF]/20 to-[#4ADE80]/20">
           <div className="maximally-container">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-maximally-900">
-                100% Transparent Formulation
+                Advanced Probiotic Formula for Optimal Gut Health
               </h1>
               <p className="text-xl text-gray-700 mb-8">
                 At Maximally, we believe you deserve to know exactly what goes into your supplements. Here's our complete formula with nothing hidden.
@@ -167,17 +162,17 @@ const Formulation = () => {
           </div>
         </section>
         
-        {/* Formulation List Section */}
+        {/* Formulation List Section with SEO-optimized headings */}
         <section className="py-16 bg-white">
           <div className="maximally-container">
             <div className="text-center mb-12">
-              <h2 className="font-serif text-3xl font-bold mb-6 text-maximally-900">Our Complete Formula</h2>
+              <h2 className="font-serif text-3xl font-bold mb-6 text-maximally-900">Our Complete Probiotic & Prebiotic Formula</h2>
               <p className="text-gray-700 max-w-3xl mx-auto">
                 Every ingredient in our formula is carefully selected based on scientific research, precisely dosed for effectiveness, and disclosed with complete transparency.
               </p>
             </div>
             
-            {/* Category Filter */}
+            {/* Category Filter - Modified to only include the allowed categories */}
             <div className="flex flex-wrap justify-center gap-3 mb-12">
               {categories.map(category => <button key={category.name} onClick={() => setSelectedCategory(category.name)} className={`flex items-center px-4 py-2 rounded-full ${selectedCategory === category.name ? "bg-[#00E5FF] text-white" : "bg-[#F9FAFB] text-gray-700 hover:bg-[#00E5FF]/10"} transition-colors`}>
                   <category.icon className="w-4 h-4 mr-2" />
@@ -209,7 +204,7 @@ const Formulation = () => {
           </div>
         </section>
         
-        {/* Research Section */}
+        {/* Research Section with SEO-optimized content */}
         <section className="py-16 bg-[#F9FAFB]">
           <div className="maximally-container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -217,7 +212,7 @@ const Formulation = () => {
                 <span className="inline-block px-3 py-1 rounded-full bg-[#4ADE80] text-gray-800 text-sm font-medium mb-4 shadow-sm">
                   Science-Backed Formula
                 </span>
-                <h2 className="font-serif text-3xl font-bold mb-6 text-maximally-900">Backed by Research</h2>
+                <h2 className="font-serif text-3xl font-bold mb-6 text-maximally-900">Best Probiotic Supplements in India</h2>
                 <p className="text-gray-700 mb-4">
                   Unlike many supplement companies, we don't hide behind proprietary blends or make exaggerated claims. Every ingredient in our formula is:
                 </p>
@@ -253,7 +248,9 @@ const Formulation = () => {
                 <CTAButton text="Buy on Amazon" href="https://amazon.com" variant="primary" size="lg" withArrow />
               </div>
               <div className="relative">
-                <img src="https://images.unsplash.com/photo-1554178286-db408c69256a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Scientific Research" className="rounded-lg shadow-lg" />
+                <img src="https://images.unsplash.com/photo-1554178286-db408c69256a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                     alt="Scientific Research on Maximally Probiotics - Best supplement for gut health" 
+                     className="rounded-lg shadow-lg" />
                 {/* Decorative elements */}
                 <div className="absolute -top-6 -left-6 w-32 h-32 bg-[#FFD700] rounded-full opacity-20 -z-10"></div>
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#4ADE80] rounded-full opacity-20 -z-10"></div>
@@ -266,10 +263,10 @@ const Formulation = () => {
         <section className="py-16 bg-white">
           <div className="maximally-container">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-3xl font-bold mb-6 text-maximally-900">Recommended Dosage</h2>
+              <h2 className="font-serif text-3xl font-bold mb-6 text-maximally-900">How to Improve Gut Health Naturally</h2>
               <div className="bg-[#F9FAFB] p-8 rounded-lg shadow-sm">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-[#00E5FF]/10 rounded-full mb-6">
-                  <Activity className="w-8 h-8 text-[#00E5FF]" />
+                  <AlertTriangle className="w-8 h-8 text-[#00E5FF]" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-maximally-900">Take two capsules daily</h3>
                 <p className="text-gray-700 mb-6">
@@ -293,7 +290,7 @@ const Formulation = () => {
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-[#00E5FF] to-[#4ADE80] text-white">
           <div className="maximally-container text-center">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">Ready for a Transparent Supplement Experience?</h2>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">Buy Probiotics Online India</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Health on Max, Gimmicks on Zero. Just research-backed nutrition that works.
             </p>
