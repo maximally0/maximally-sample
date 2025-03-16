@@ -25,7 +25,7 @@ const Influencers = () => {
             <div className="mt-10">
               <CTAButton 
                 text="Apply Now" 
-                href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" 
+                href="https://docs.google.com/forms/d/e/1FAIpQLScF7pAVB7V9lq402308_hWXsA57jXEMkmzoMh06mzSwCiQYyw/viewform" 
                 variant="primary" 
                 size="lg"
                 withArrow={true}
@@ -83,7 +83,7 @@ const Influencers = () => {
             <div className="mt-8 text-center">
               <CTAButton 
                 text="Apply Now" 
-                href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" 
+                href="https://docs.google.com/forms/d/e/1FAIpQLScF7pAVB7V9lq402308_hWXsA57jXEMkmzoMh06mzSwCiQYyw/viewform" 
                 variant="secondary" 
                 size="md"
               />
