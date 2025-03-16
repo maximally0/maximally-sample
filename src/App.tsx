@@ -12,6 +12,7 @@ import BlogPost from "./pages/BlogPost";
 import Formulation from "./pages/Formulation";
 import Influencers from "./pages/Influencers";
 import Careers from "./pages/Careers";
+import ComingSoon from "./pages/ComingSoon";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -51,6 +52,7 @@ const App = () => (
             <Route path="/formulation" element={<Formulation />} />
             <Route path="/influencers" element={<Influencers />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/coming-soon" element={<ComingSoon />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

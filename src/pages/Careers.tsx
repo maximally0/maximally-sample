@@ -4,7 +4,6 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
 import { Rocket, Handshake, UserPlus, Activity, Award, GraduationCap } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 
 const JobCard = ({ 
@@ -50,9 +49,6 @@ const BenefitCard = ({
 );
 
 const Careers = () => {
-  // Google Form URL - Replace with your actual Google Form link
-  const googleFormUrl = "https://forms.gle/yourFormLink";
-  
   return (
     <div className="flex flex-col min-h-screen bg-[#f9f9f9]">
       <NavBar />
@@ -74,14 +70,6 @@ const Careers = () => {
                   </p>
                 </div>
               </div>
-              
-              <CTAButton 
-                text="Apply Now & Let's Talk!" 
-                href={googleFormUrl}
-                variant="primary"
-                size="lg"
-                withArrow
-              />
             </div>
           </div>
         </section>
@@ -116,14 +104,14 @@ const Careers = () => {
                   icon={GraduationCap}
                 />
                 <BenefitCard 
-                  title="Cool Perks" 
-                  description="Work with passionate people, test our products, and grow with us!"
-                  icon={Award}
+                  title="Sports-Driven Culture" 
+                  description="We promote an active sports culture that keeps our team energized and collaborative."
+                  icon={Activity}
                 />
                 <BenefitCard 
-                  title="Make an Impact" 
-                  description="Your contributions will directly affect our success and growth trajectory."
-                  icon={Activity}
+                  title="Young & Ambitious Team" 
+                  description="We welcome talented, ambitious individuals who want to grow with us and make an impact."
+                  icon={Award}
                 />
               </div>
             </div>
@@ -155,16 +143,6 @@ const Careers = () => {
                   icon={Handshake}
                 />
               </div>
-              
-              <div className="mt-12 text-center">
-                <CTAButton 
-                  text="Apply Now & Let's Talk!" 
-                  href={googleFormUrl}
-                  variant="primary"
-                  size="lg"
-                  withArrow
-                />
-              </div>
             </div>
           </div>
         </section>
@@ -178,12 +156,19 @@ const Careers = () => {
               </h2>
               
               <div className="bg-gray-50 p-8 rounded-lg">
+                <div className="mb-8 text-center">
+                  <p className="text-lg font-medium mb-2">Interested in joining our team?</p>
+                  <p className="text-maximally-800 font-bold text-xl">
+                    Send your resume to <a href="mailto:hello@maximally.in" className="text-bauhaus-cyan hover:underline">hello@maximally.in</a>
+                  </p>
+                </div>
+                
                 <ol className="space-y-6">
                   <li className="flex gap-4">
                     <div className="bg-bauhaus-cyan text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">1</div>
                     <div>
-                      <h3 className="font-bold text-lg">Submit Your Application</h3>
-                      <p className="text-gray-600">Fill out our simple application form with your details and why you'd like to join us.</p>
+                      <h3 className="font-bold text-lg">Email Your Application</h3>
+                      <p className="text-gray-600">Send us your resume and a brief introduction about yourself and why you'd like to join us.</p>
                     </div>
                   </li>
                   <Separator />
@@ -215,13 +200,9 @@ const Careers = () => {
               
               <div className="mt-12 text-center">
                 <p className="text-gray-600 mb-6">Ready to take the first step?</p>
-                <CTAButton 
-                  text="Apply Now & Let's Talk!" 
-                  href={googleFormUrl}
-                  variant="primary"
-                  size="lg"
-                  withArrow
-                />
+                <p className="text-xl font-medium">
+                  Email us at <a href="mailto:hello@maximally.in" className="text-bauhaus-cyan font-bold hover:underline">hello@maximally.in</a>
+                </p>
               </div>
             </div>
           </div>

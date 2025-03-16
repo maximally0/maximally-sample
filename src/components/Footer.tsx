@@ -74,7 +74,7 @@ const Footer = () => {
             <ul className="space-y-2 text-maximally-100">
               <li>hello@maximally.in</li>
               <li>+91 9041260790</li>
-              <li className="">100 Wellness Way,<br />Health Center, CA 90210</li>
+              {/* Address removed as requested */}
             </ul>
           </div>
         </div>

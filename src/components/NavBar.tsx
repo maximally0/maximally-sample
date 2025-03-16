@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Briefcase } from 'lucide-react';
 import CTAButton from './CTAButton';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
@@ -50,12 +50,16 @@ const NavBar = () => {
           <Link to="/formulation" className="font-medium text-maximally-800 hover:text-maximally-600 transition-colors">
             Formulation
           </Link>
+          <Link to="/careers" className="font-medium text-maximally-800 hover:text-maximally-600 transition-colors flex items-center gap-1">
+            <Briefcase className="h-4 w-4" />
+            Careers
+          </Link>
           <Link to="/influencers" className="font-medium text-maximally-800 hover:text-maximally-600 transition-colors">
             Join Our Influencer Network
           </Link>
           <CTAButton 
             text="Buy on Amazon" 
-            href="https://amazon.com" 
+            href="/coming-soon" 
             variant="primary" 
             size="sm"
           />
@@ -106,6 +110,14 @@ const NavBar = () => {
             Formulation
           </Link>
           <Link 
+            to="/careers" 
+            className="text-xl font-medium text-maximally-800 hover:text-maximally-600 transition-colors flex items-center gap-2"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <Briefcase className="h-5 w-5" />
+            Careers
+          </Link>
+          <Link 
             to="/influencers" 
             className="text-xl font-medium text-maximally-800 hover:text-maximally-600 transition-colors"
             onClick={() => setIsMenuOpen(false)}
@@ -114,7 +126,7 @@ const NavBar = () => {
           </Link>
           <CTAButton 
             text="Buy on Amazon" 
-            href="https://amazon.com" 
+            href="/coming-soon" 
             variant="primary" 
             size="md"
             className="mt-4"

@@ -12,7 +12,7 @@ const FormulationCta = () => {
         </p>
         <CTAButton 
           text="Buy on Amazon Today" 
-          href="https://amazon.com" 
+          href="/coming-soon" 
           variant="secondary" 
           size="lg" 
           withArrow 
